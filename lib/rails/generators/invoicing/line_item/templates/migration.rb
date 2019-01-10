@@ -2,6 +2,7 @@ class CreateInvoicingLineItems < ActiveRecord::Migration
   def change
     create_table :invoicing_line_items do |t|
       t.references :ledger_item
+      t.references :line_item_group
 
       t.string   :type
       t.decimal  :net_amount, precision: 20, scale: 4

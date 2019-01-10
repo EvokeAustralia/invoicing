@@ -15,6 +15,7 @@ require "invoicing/time_dependent"
 ActiveRecord::Base.send(:extend, Invoicing::CachedRecord::ActMethods)
 ActiveRecord::Base.send(:extend, Invoicing::CurrencyValue::ActMethods)
 ActiveRecord::Base.send(:extend, Invoicing::LedgerItem::ActMethods)
+ActiveRecord::Base.send(:extend, Invoicing::LineItemGroup::ActMethods)
 ActiveRecord::Base.send(:extend, Invoicing::LineItem::ActMethods)
 ActiveRecord::Base.send(:extend, Invoicing::Price::ActMethods)
 ActiveRecord::Base.send(:extend, Invoicing::TaxRate::ActMethods)

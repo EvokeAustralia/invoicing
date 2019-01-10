@@ -5,9 +5,10 @@ module Invoicing
       namespace "invoicing"
 
       def create_models
-        invoke "invoicing:tax_rate",    ["tax_rate"]
-        invoke "invoicing:ledger_item", ["ledger_item"]
-        invoke "invoicing:line_item",   ["line_item"]
+        invoke "invoicing:tax_rate",        ["tax_rate"]
+        invoke "invoicing:ledger_item",     ["ledger_item"]
+        invoke "invoicing:line_item_group", ["line_item_group"]
+        invoke "invoicing:line_item",       ["line_item"]
       end
     end
   end
